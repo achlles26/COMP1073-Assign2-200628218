@@ -2,7 +2,8 @@ let select1 = document.getElementById("select1");
 let select2 = document.getElementById("select2");
 let select3 = document.getElementById("select3");
 
-let output = document.querySelector("p");
+let output1 = document.querySelector("p");
+let output2 = document.querySelector("h3");
 
 let option1 = document.createElement("option")
 
@@ -69,7 +70,7 @@ select3.appendChild(option8);
 
 let button = document.createElement("button");
 button.textContent = "Order Now";
-output.appendChild(button);
+output1.appendChild(button);
 
 
 class Smoothie {
@@ -83,5 +84,22 @@ class Smoothie {
         this.size = size;
         this.flavour = flavour;
         this.addon = addon;
+    }
+}
+
+button.addEventListener("click", myFunction);
+
+function myFunction(){
+
+    let smoothie = new Smoothie(select1.value, select2.value, select3.value);
+
+    console.log(smoothie);
+
+    if (select3.value === "none") {
+
+        output2.textContent = `Your order was a ${smoothie.size} ${smoothie.flavour} with no addons.`;
+    } else {
+
+        output2.textContent = `Your order was a ${smoothie.size} ${smoothie.flavour} with ${smoothie.addon}.`;
     }
 }
