@@ -39,6 +39,13 @@ option5.textContent = "Strawberry Banana";
 
 select2.appendChild(option5);
 
+let option9 = document.createElement("option");
+
+option9.value = "none";
+option9.textContent = "None";
+
+select3.appendChild(option9);
+
 let option6 = document.createElement("option");
 
 option6.value = "protein";
@@ -52,6 +59,13 @@ option7.value = "calcium";
 option7.textContent = "Calcium";
 
 select3.appendChild(option7);
+
+let option8 = document.createElement("option");
+
+option8.value = "fibre";
+option8.textContent = "Fibre";
+
+select3.appendChild(option8);
 
 let button = document.createElement("button");
 button.textContent = "Order Now";
