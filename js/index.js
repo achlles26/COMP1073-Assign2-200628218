@@ -97,9 +97,9 @@ function myFunction(){
 
     if (select3.value === "none") {
 
-        output2.textContent = `Your order was a ${smoothie.size} ${smoothie.flavour} with no addons.`;
+        output2.textContent = `Your order was a ${smoothie.size} ${smoothie.flavour} smoothie with no addons.`;
     } else {
 
-        output2.textContent = `Your order was a ${smoothie.size} ${smoothie.flavour} with ${smoothie.addon}.`;
+        output2.textContent = `Your order was a ${smoothie.size} ${smoothie.flavour} smoothie with ${smoothie.addon}.`;
     }
 }
